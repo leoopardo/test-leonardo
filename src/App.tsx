@@ -47,30 +47,7 @@ function App() {
         <img src={Linkedin} style={{ height: "30px" }} />
         Linkedin
       </a>
-      <a
-        style={{
-          position: "absolute",
-          left: "30px",
-          top: "95px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        leo.san9@hotmail.com
-      </a>
-      <a
-        style={{
-          position: "absolute",
-          left: "30px",
-          top: "120px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        +5545988369425
-      </a>
+    
       <div className="section" id="start">
         <button className="exercise-list">
           <a href="#fatorial">1 - Algorithm exercise / Fatorial</a>
