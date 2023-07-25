@@ -27,7 +27,16 @@ export const Exercise2 = () => {
   };
 
   return (
-    <div id="palindrome" className="section">
+    <div
+      id="palindrome"
+      className="section"
+      style={{
+        opacity: 1,
+        backgroundImage:
+          "radial-gradient(#404949 1.4500000000000002px, #242424 1.4500000000000002px)",
+        backgroundSize: "29px 29px",
+      }}
+    >
       <h1>String manipulation exercise - Palindrome:</h1>
       <p className="factorial-description">
         Write a function that checks whether a word or phrase is a palindrome. A

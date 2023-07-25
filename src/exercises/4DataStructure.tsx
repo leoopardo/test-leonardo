@@ -22,7 +22,10 @@ export const Exercise4 = () => {
   };
 
   return (
-    <div id="data" className="section" style={{ backgroundColor: "#242424" }}>
+    <div id="data" className="section" style={{       opacity: 1,
+      backgroundImage:
+        "radial-gradient(#404949 1.4500000000000002px, #242424 1.4500000000000002px)",
+      backgroundSize: "29px 29px", }}>
       <h1>Data structure exercise - Stack:</h1>
       <p className="factorial-description">
         Implement a stack data structure in a programming language of your

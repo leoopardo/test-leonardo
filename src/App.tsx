@@ -47,8 +47,17 @@ function App() {
         <img src={Linkedin} style={{ height: "30px" }} />
         Linkedin
       </a>
-    
-      <div className="section" id="start">
+
+      <div
+        className="section"
+        id="start"
+        style={{
+          opacity: 1,
+          backgroundImage:
+            "radial-gradient(#404949 1.4500000000000002px, #242424 1.4500000000000002px)",
+          backgroundSize: "29px 29px",
+        }}
+      >
         <button className="exercise-list">
           <a href="#fatorial">1 - Algorithm exercise / Fatorial</a>
         </button>

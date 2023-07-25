@@ -23,7 +23,10 @@ export const Exercise6 = () => {
   };
 
   return (
-    <div id="file" className="section" style={{ backgroundColor: "#242424" }}>
+    <div id="file" className="section" style={{       opacity: 1,
+      backgroundImage:
+        "radial-gradient(#404949 1.4500000000000002px, #242424 1.4500000000000002px)",
+      backgroundSize: "29px 29px", }}>
       <h1>File manipulation exercise - Word Count:</h1>
       <p className="factorial-description">
         Write a program that counts the number of words in a text file given as
