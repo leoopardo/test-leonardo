@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { Exercise1 } from "./exercises/1Factorial";
 import { Exercise2 } from "./exercises/2Palindrome";
@@ -6,10 +7,70 @@ import { Exercise4 } from "./exercises/4DataStructure";
 import { Exercise5 } from "./exercises/5ObjectOriented";
 import { Exercise6 } from "./exercises/6File";
 import { Exercise7 } from "./exercises/7Fibonacci";
+import ArrowUp from "./assets/arrow-up.svg";
+import ArrowUpBlue from "./assets/arrow-top-blue.svg";
+import ArrowDown from "./assets/arrow-down.svg";
+import Github from "./assets/github.png";
+import Linkedin from "./assets/linkedin.png";
 
 function App() {
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
   return (
     <>
+      <a
+        style={{
+          position: "absolute",
+          left: "30px",
+          top: "30px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        href="https://github.com/leoopardo"
+        target="_blank"
+      >
+        <img src={Github} style={{ height: "30px" }} />
+        Github
+      </a>
+      <a
+        style={{
+          position: "absolute",
+          left: "30px",
+          top: "65px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        href="https://www.linkedin.com/in/leonardo-araujo-/"
+        target="_blank"
+      >
+        <img src={Linkedin} style={{ height: "30px" }} />
+        Linkedin
+      </a>
+      <a
+        style={{
+          position: "absolute",
+          left: "30px",
+          top: "95px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        leo.san9@hotmail.com
+      </a>
+      <a
+        style={{
+          position: "absolute",
+          left: "30px",
+          top: "120px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        +5545988369425
+      </a>
       <div className="section" id="start">
         <button className="exercise-list">
           <a href="#fatorial">1 - Algorithm exercise / Fatorial</a>
@@ -44,7 +105,10 @@ function App() {
       <Exercise6 />
       <Exercise7 />
 
-      <ul className="floating-list">
+      <ul
+        className="floating-list"
+        style={{ animationName: openMenu ? "showFloating" : "hideFloating" }}
+      >
         <li className="floating-item">
           <a href="#fatorial">#1</a>
         </li>
@@ -66,12 +130,28 @@ function App() {
         <li className="floating-item">
           <a href="#fibonacci">#7</a>
         </li>
+        <li className="floating-item">
+          <a
+            onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            }}
+          >
+            <img src={ArrowUpBlue} style={{ height: "12px" }} /> top
+          </a>
+        </li>
       </ul>
       <button
         className="floating"
-        onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
+        style={{ fontSize: "26px" }}
+        onClick={() => {
+          setOpenMenu(!openMenu);
+        }}
       >
-        Start
+        {openMenu ? (
+          <img src={ArrowDown} style={{ height: "20px" }} />
+        ) : (
+          <img src={ArrowUp} style={{ height: "20px" }} />
+        )}
       </button>
     </>
   );
